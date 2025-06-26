@@ -1,7 +1,7 @@
 exams = []
 
 def display_menu():
-    print("\n Smart Scheduler Menu ") --hallo
+    print("\n Smart Scheduler Menu ")
     print("1. Add a new exam")
     print("2. View all exams")
     print("3. Edit an exam entry")
