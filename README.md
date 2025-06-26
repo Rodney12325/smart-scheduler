@@ -1,13 +1,12 @@
 exams = []
 
 def display_menu():
-    print("\n--- Smart Scheduler Menu ---")
+    print("\n Smart Scheduler Menu ")
     print("1. Add a new exam")
     print("2. View all exams")
     print("3. Edit an exam entry")
     print("4. Delete an exam entry")
     print("5. Exit")
-    print("-----------------------------")
 
 def add_exam():
     exam_name = input("Enter exam name: ")
