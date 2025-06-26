@@ -1,5 +1,10 @@
+# Smart Scheduler
+# A terminal-based exam scheduler using Python with basic CRUD operations
+
+# List to store all scheduled exams
 exams = []
 
+# Display the main menu to the user
 def display_menu():
     print("\n Smart Scheduler Menu ")
     print("1. Add a new exam")
@@ -8,12 +13,15 @@ def display_menu():
     print("4. Delete an exam entry")
     print("5. Exit")
 
+# Add a new exam to the schedule
 def add_exam():
+    # Get exam details from user
     exam_name = input("Enter exam name: ")
     exam_date = input("Enter exam date (YYYY-MM-DD): ")
     exam_time = input("Enter exam time (HH:MM): ")
     exam_room = input("Enter assigned room: ")
     
+    # Store details in a dictionary
     exam = {
         'name': exam_name,
         'date': exam_date,
@@ -21,9 +29,11 @@ def add_exam():
         'room': exam_room
     }
     
+    # Add to the exam list
     exams.append(exam)
     print("Exam added successfully!")
 
+# Display all scheduled exams
 def view_exams():
     if not exams:
         print("No exams scheduled.")
@@ -34,11 +44,13 @@ def view_exams():
         print(f"{index + 1}. Name: {exam['name']}, Date: {exam['date']}, Time: {exam['time']}, Room: {exam['room']}")
     print("-----------------------")
 
+# Edit an existing exam
 def edit_exam():
     view_exams()
     try:
         exam_index = int(input("Enter the exam number to edit: ")) - 1
         if 0 <= exam_index < len(exams):
+            # Allow user to update fields or keep them unchanged
             exam_name = input("Enter new exam name (leave blank to keep current): ")
             exam_date = input("Enter new exam date (leave blank to keep current): ")
             exam_time = input("Enter new exam time (leave blank to keep current): ")
@@ -59,6 +71,7 @@ def edit_exam():
     except ValueError:
         print("Please enter a valid number.")
 
+# Delete an exam from the schedule
 def delete_exam():
     view_exams()
     try:
@@ -71,6 +84,7 @@ def delete_exam():
     except ValueError:
         print("Please enter a valid number.")
 
+# Main loop of the program
 def main():
     while True:
         display_menu()
@@ -90,5 +104,6 @@ def main():
         else:
             print("Invalid option. Please try again.")
 
+# Run the program
 if __name__ == "__main__":
     main()
