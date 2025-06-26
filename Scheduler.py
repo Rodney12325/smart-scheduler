@@ -99,7 +99,7 @@ def main():
         elif choice == '4':
             delete_exam()
         elif choice == '5':
-            print("Exiting the Smart Scheduler. Goodbye!")
+            print("Exiting the Smart Scheduler.")
             break
         else:
             print("Invalid option. Please try again.")
