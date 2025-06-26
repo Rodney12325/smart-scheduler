@@ -1,32 +1,3 @@
-hello
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 exams = []
 
 def display_menu():
